@@ -397,5 +397,74 @@
     "country": "HK",
     "reputation": "notable",
     "specialties": ["Tai-Hang", "neighborhood-specialty"]
+  },
+  {
+    "id": "watchhouse",
+    "name": "WatchHouse",
+    "city": "London",
+    "country": "GB",
+    "reputation": "regional-leader",
+    "specialties": ["single-origin", "modern-aesthetic", "multi-location"],
+    "website": "https://watchhouse.com",
+    "notes": "In-house roastery. Multi-location London + NYC expansion."
+  },
+  {
+    "id": "allpress-espresso",
+    "name": "Allpress Espresso",
+    "city": "Auckland",
+    "country": "NZ",
+    "reputation": "regional-leader",
+    "specialties": ["NZ-style-espresso", "direct-trade"],
+    "website": "https://allpressespresso.com",
+    "notes": "Founded Auckland 1989. London Roastery Cafe on Dalston Lane. Locations across NZ, Australia, Japan, UK."
+  },
+  {
+    "id": "caravan-coffee",
+    "name": "Caravan Coffee Roasters",
+    "city": "London",
+    "country": "GB",
+    "reputation": "regional-leader",
+    "specialties": ["direct-trade", "brunch-coffee-crossover"],
+    "website": "https://caravanrestaurants.co.uk",
+    "notes": "In-house roastery at Bankside. Multi-location London."
+  },
+  {
+    "id": "climpson-and-sons",
+    "name": "Climpson & Sons",
+    "city": "London",
+    "country": "GB",
+    "reputation": "regional-leader",
+    "specialties": ["direct-trade", "East-London-anchor"],
+    "website": "https://climpsonandsons.com",
+    "notes": "Founded 2005. Roastery at The Arch in Hackney. Iconic E5/E8 specialty roaster."
+  },
+  {
+    "id": "origin-coffee",
+    "name": "Origin Coffee",
+    "city": "Helston",
+    "country": "GB",
+    "reputation": "regional-leader",
+    "specialties": ["direct-trade", "competition", "Cornwall-roastery"],
+    "website": "https://www.origincoffee.co.uk",
+    "notes": "Cornwall-based roaster (founded 2004). London cafes in Shoreditch, Southwark, British Library."
+  },
+  {
+    "id": "rosslyn-coffee",
+    "name": "Rosslyn Coffee",
+    "city": "London",
+    "country": "GB",
+    "reputation": "regional-leader",
+    "specialties": ["small-batch", "single-origin"],
+    "website": "https://www.rosslyncoffee.com",
+    "notes": "Small in-house roastery. City of London cafes designed for high-volume specialty without quality drop."
+  },
+  {
+    "id": "saint-espresso",
+    "name": "Saint Espresso",
+    "city": "London",
+    "country": "GB",
+    "reputation": "notable",
+    "specialties": ["in-house-roastery", "multi-location"],
+    "website": "https://saint-espresso.com"
   }
 ]
