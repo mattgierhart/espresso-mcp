@@ -177,11 +177,11 @@ Edit `~/.cursor/mcp.json`:
 
 ### VS Code
 
-Add to your VS Code `settings.json`:
+VS Code uses a dedicated `mcp.json` file (not `settings.json`). For workspace-scoped config, create `.vscode/mcp.json`. For user-wide, run the `MCP: Open User Configuration` command from the Command Palette.
 
 ```json
 {
-  "mcp.servers": {
+  "servers": {
     "espresso": {
       "command": "npx",
       "args": ["-y", "espresso-mcp@latest"]
@@ -189,6 +189,8 @@ Add to your VS Code `settings.json`:
   }
 }
 ```
+
+Note: VS Code uses the key `servers` (not `mcpServers`) — this is the most common copy-paste mistake when migrating configs from other clients.
 
 ### Generic stdio client
 
@@ -243,9 +245,9 @@ The model resolves the address to coordinates (using its built-in knowledge or a
 ### Address-based query
 
 ```
-You: I'm walking around 200 N Columbus Dr, Chicago. What's the closest specialty espresso?
+You: I'm walking around Millennium Park in Chicago. What's the closest specialty espresso?
 
-[Claude resolves the address → 41.886, -87.620]
+[Claude resolves the landmark → ~41.882, -87.622]
 [Calls find_espresso_near with radius_km: 2]
 [Ranks results by quality, then distance]
 ```
