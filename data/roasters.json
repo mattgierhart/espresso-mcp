@@ -581,5 +581,63 @@
     "specialties": ["competition", "education", "single-origin"],
     "website": "https://coffeeprojectny.com",
     "notes": "Co-founder Chi Sum Ngai — multi-time US Brewers Cup champion. Education-forward."
+  },
+  {
+    "id": "ascension-coffee",
+    "name": "Ascension Coffee",
+    "city": "Dallas",
+    "country": "US",
+    "reputation": "regional-leader",
+    "specialties": ["direct-trade", "food-coffee-crossover", "multi-location"],
+    "website": "https://ascensiondallas.com",
+    "notes": "Longest-running DFW specialty chain. In-house roastery."
+  },
+  {
+    "id": "cultivar-coffee",
+    "name": "Cultivar Coffee",
+    "city": "Dallas",
+    "country": "US",
+    "reputation": "regional-leader",
+    "specialties": ["direct-trade", "single-origin"],
+    "website": "https://cultivarcoffee.com",
+    "notes": "Roaster + cafes. Dallas third-wave anchor."
+  },
+  {
+    "id": "noble-coyote",
+    "name": "Noble Coyote Coffee Roasters",
+    "city": "Dallas",
+    "country": "US",
+    "reputation": "regional-leader",
+    "specialties": ["direct-trade", "neighborhood-roastery"],
+    "website": "https://noblecoyotecoffee.com",
+    "notes": "Expo Park roaster + cafe. Long-running Dallas specialty."
+  },
+  {
+    "id": "oak-cliff-coffee",
+    "name": "Oak Cliff Coffee Roasters",
+    "city": "Dallas",
+    "country": "US",
+    "reputation": "regional-leader",
+    "specialties": ["OG-Dallas-specialty", "direct-trade"],
+    "website": "https://oakcliffcoffee.com",
+    "notes": "One of the OGs of Dallas specialty coffee. Bishop Arts area."
+  },
+  {
+    "id": "tweed-coffee",
+    "name": "Tweed Coffee",
+    "city": "Dallas",
+    "country": "US",
+    "reputation": "regional-leader",
+    "specialties": ["single-origin", "third-wave"],
+    "notes": "Sister roaster to Houndstooth. Strong third-wave craft."
+  },
+  {
+    "id": "pax-and-beneficia",
+    "name": "Pax & Beneficia",
+    "city": "Dallas",
+    "country": "US",
+    "reputation": "notable",
+    "specialties": ["in-house-roastery", "Mediterranean-crossover"],
+    "website": "https://paxandbeneficia.com"
   }
 ]
