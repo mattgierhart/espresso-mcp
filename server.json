@@ -1,0 +1,23 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.mattgierhart/espresso-mcp",
+  "title": "Espresso MCP",
+  "description": "Find great espresso cafes worldwide. Codifies what makes great espresso into a transparent scoring algorithm — heavy negative weighting on the syrup-cover-up pattern, positive weighting on sourcing, freshness, equipment, and competition involvement. Ships with a curated database of 100+ specialty coffee shops and 8 anti-pattern entries that exemplify what to avoid.",
+  "version": "0.2.0",
+  "websiteUrl": "https://github.com/mattgierhart/espresso-mcp",
+  "repository": {
+    "url": "https://github.com/mattgierhart/espresso-mcp",
+    "source": "github"
+  },
+  "packages": [
+    {
+      "registryType": "npm",
+      "registryBaseUrl": "https://registry.npmjs.org",
+      "identifier": "espresso-mcp",
+      "version": "0.2.0",
+      "transport": {
+        "type": "stdio"
+      }
+    }
+  ]
+}

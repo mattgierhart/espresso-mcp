@@ -1,6 +1,7 @@
 {
   "name": "espresso-mcp",
   "version": "0.2.0",
+  "mcpName": "io.github.mattgierhart/espresso-mcp",
   "description": "MCP server for finding great espresso cafes. Codifies what makes great espresso into a transparent scoring algorithm, backed by a curated database of specialty coffee shops.",
   "keywords": [
     "mcp",
