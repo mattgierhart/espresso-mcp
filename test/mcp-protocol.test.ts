@@ -26,12 +26,13 @@ describe("MCP protocol — round-trip via InMemoryTransport", () => {
     await client?.close();
   });
 
-  it("lists all 5 tools", async () => {
+  it("lists all 6 tools", async () => {
     const r = await client.listTools();
     const names = r.tools.map((t) => t.name).sort();
     expect(names).toEqual([
       "find_espresso_near",
       "get_cafe_details",
+      "list_anti_patterns",
       "list_great_roasters",
       "score_cafe",
       "search_cafes",
@@ -134,5 +135,34 @@ describe("MCP protocol — round-trip via InMemoryTransport", () => {
     };
     expect(data.roasters.length).toBeGreaterThan(0);
     for (const r of data.roasters) expect(r.reputation).toBe("world-class");
+  });
+
+  it("list_anti_patterns returns avoid-tier shops with categories", async () => {
+    const r = await client.callTool({
+      name: "list_anti_patterns",
+      arguments: {},
+    });
+    expect(r.isError).toBeFalsy();
+    const data = r.structuredContent as {
+      anti_patterns: Array<{ name: string; category: string; score: { tier: string } }>;
+    };
+    expect(data.anti_patterns.length).toBeGreaterThan(0);
+    for (const a of data.anti_patterns) {
+      expect(a.category).toBeDefined();
+      // Anti-patterns never reach "great" or "world-class" — that's the floor we enforce.
+      expect(["avoid", "fair", "good"]).toContain(a.score.tier);
+    }
+  });
+
+  it("list_anti_patterns filters by category", async () => {
+    const r = await client.callTool({
+      name: "list_anti_patterns",
+      arguments: { category: "mass-market-chain" },
+    });
+    const data = r.structuredContent as {
+      anti_patterns: Array<{ category: string }>;
+    };
+    expect(data.anti_patterns.length).toBeGreaterThan(0);
+    for (const a of data.anti_patterns) expect(a.category).toBe("mass-market-chain");
   });
 });

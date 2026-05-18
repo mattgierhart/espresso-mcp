@@ -109,7 +109,7 @@ export const POSITIVE_SIGNALS: SignalSpec[] = [
 export const NEGATIVE_SIGNALS: SignalSpec[] = [
   {
     key: "syrup_emphasis",
-    weight: -18,
+    weight: -22,
     category: "anti-cover-up",
     description: "Menu dominated by flavored-syrup drinks",
     explanation:

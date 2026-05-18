@@ -29,7 +29,7 @@ function findDataDir(): string {
   return candidates[0]!;
 }
 
-let cache: { cafes: Cafe[]; roasters: Roaster[]; awards: Award[] } | null = null;
+let cache: { cafes: Cafe[]; roasters: Roaster[]; awards: Award[]; anti_patterns: Cafe[] } | null = null;
 
 async function readJson<T>(path: string): Promise<T> {
   const raw = await readFile(path, "utf-8");
@@ -40,18 +40,26 @@ export async function loadData(dataDir?: string): Promise<{
   cafes: Cafe[];
   roasters: Roaster[];
   awards: Award[];
+  anti_patterns: Cafe[];
 }> {
   if (cache) return cache;
   const dir = dataDir ?? findDataDir();
 
-  const [cafes, roasters, awards] = await Promise.all([
+  const [cafes, roasters, awards, anti_patterns] = await Promise.all([
     readJson<Cafe[]>(join(dir, "cafes.json")),
     readJson<Roaster[]>(join(dir, "roasters.json")),
     readJson<Award[]>(join(dir, "awards.json")),
+    readJson<Cafe[]>(join(dir, "anti-patterns.json")).catch(() => [] as Cafe[]),
   ]);
 
-  logger.info("data loaded", { cafes: cafes.length, roasters: roasters.length, awards: awards.length, dir });
-  cache = { cafes, roasters, awards };
+  logger.info("data loaded", {
+    cafes: cafes.length,
+    roasters: roasters.length,
+    awards: awards.length,
+    anti_patterns: anti_patterns.length,
+    dir,
+  });
+  cache = { cafes, roasters, awards, anti_patterns };
   return cache;
 }
 

@@ -47,6 +47,11 @@ export interface Signals {
   no_origin_info?: boolean;
 }
 
+export type AntiPatternCategory =
+  | "mass-market-chain"
+  | "flavor-led-specialty"
+  | "instagram-bait";
+
 export interface Cafe {
   id: string;
   name: string;
@@ -65,6 +70,11 @@ export interface Cafe {
   website?: string | null;
   notes?: string;
   last_verified: string;
+  /**
+   * Present only on anti-pattern entries loaded from `data/anti-patterns.json`.
+   * Real curated cafes do NOT set this field.
+   */
+  category?: AntiPatternCategory;
 }
 
 export interface Roaster {

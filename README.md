@@ -171,6 +171,19 @@ Curated specialty roasters by country and reputation tier.
 { "country": "DK", "min_reputation": "regional-leader", "limit": 25 }
 ```
 
+### `list_anti_patterns`
+
+Curated shops that exemplify what to **avoid** — the contrast set for the algorithm. Two flavors:
+
+- **`mass-market-chain`** — Starbucks, Dunkin', Costa, Tim Hortons, Peet's, Caribou. Generic dark roasts, flavored-drink menus, low sourcing transparency.
+- **`flavor-led-specialty`** — shops that display third-wave signage (in-house roasting, single-origin signs, roast dates) but in practice serve a syrup-forward menu. *Looks specialty, drinks flavored.* Useful contrast when explaining why a recommended shop is the real thing.
+
+```jsonc
+{ "category": "flavor-led-specialty", "limit": 10 }
+```
+
+Anti-patterns are stored separately in [`data/anti-patterns.json`](data/anti-patterns.json) so they never bleed into `find_espresso_near` or `search_cafes` results.
+
 ---
 
 ## How scoring works

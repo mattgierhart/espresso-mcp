@@ -53,4 +53,45 @@ describe("curated data", () => {
       }
     }
   });
+
+  it("anti-patterns load with a category set on every entry", async () => {
+    const { anti_patterns } = await loadData();
+    expect(anti_patterns.length).toBeGreaterThan(0);
+    for (const a of anti_patterns) {
+      expect(a.category).toBeDefined();
+      expect(["mass-market-chain", "flavor-led-specialty", "instagram-bait"]).toContain(a.category);
+    }
+  });
+
+  it("mass-market-chain anti-patterns score in 'avoid' or 'fair'", async () => {
+    const { anti_patterns, roasters } = await loadData();
+    const { scoreCafeRecord } = await import("../src/scoring/score.js");
+    const chains = anti_patterns.filter((a) => a.category === "mass-market-chain");
+    expect(chains.length).toBeGreaterThan(0);
+    for (const a of chains) {
+      const result = scoreCafeRecord(a, roasters);
+      expect(
+        ["avoid", "fair"],
+        `${a.name} scored ${result.score} (${result.tier}) — chains must score avoid/fair`,
+      ).toContain(result.tier);
+    }
+  });
+
+  it("flavor-led-specialty anti-patterns are flagged by category even when score is forgiving", async () => {
+    // These are shops with genuine third-wave structural signals (in-house roasting,
+    // single-origin signs, roast dates) but flavor-forward menus. The structural
+    // signals will float their score upward; the category flag is the explicit
+    // human override saying "we know it looks specialty but doesn't deliver."
+    const { anti_patterns, roasters } = await loadData();
+    const { scoreCafeRecord } = await import("../src/scoring/score.js");
+    const flavorLed = anti_patterns.filter((a) => a.category === "flavor-led-specialty");
+    expect(flavorLed.length).toBeGreaterThan(0);
+    for (const a of flavorLed) {
+      expect(a.category).toBe("flavor-led-specialty");
+      const result = scoreCafeRecord(a, roasters);
+      // Their score is informative but the category is the authoritative anti-flag.
+      // Assert they never reach "great" or "world-class" tier.
+      expect(["avoid", "fair", "good"], `${a.name} scored ${result.score} (${result.tier})`).toContain(result.tier);
+    }
+  });
 });
