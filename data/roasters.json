@@ -512,5 +512,74 @@
     "reputation": "notable",
     "specialties": ["zero-waste", "closed-loop-sustainability", "single-origin"],
     "website": "https://islacoffee.de"
+  },
+  {
+    "id": "devocion",
+    "name": "Devoción",
+    "city": "Brooklyn",
+    "country": "US",
+    "reputation": "world-class",
+    "specialties": ["Colombia-farm-direct", "10-day-fresh", "transparency"],
+    "website": "https://www.devocion.com",
+    "notes": "Sources direct from Colombian farms. Beans flown to Brooklyn within 10 days of harvest. NYC roastery + multi-location."
+  },
+  {
+    "id": "sey-coffee",
+    "name": "Sey Coffee",
+    "city": "Brooklyn",
+    "country": "US",
+    "reputation": "world-class",
+    "specialties": ["Nordic-style", "washed-coffees", "gratuity-free"],
+    "website": "https://www.seycoffee.com",
+    "notes": "Founded 2014 (formerly Lofted Coffee). Bushwick roastery. Nordic-style washed-only program. Gratuity-free model."
+  },
+  {
+    "id": "loveless-coffees",
+    "name": "Loveless Coffees",
+    "city": "Brooklyn",
+    "country": "US",
+    "reputation": "regional-leader",
+    "specialties": ["NY-Nordic", "transparent-pricing", "Loring-Falcon"],
+    "notes": "Founded 2017 in Bushwick (formerly Spectrum Coffees, Red Hook). Loring Falcon roaster. 'NY-Nordic' medium-light roast style."
+  },
+  {
+    "id": "black-fox-coffee",
+    "name": "Black Fox Coffee",
+    "city": "New York",
+    "country": "US",
+    "reputation": "regional-leader",
+    "specialties": ["high-volume-specialty", "direct-trade"],
+    "website": "https://blackfoxcoffee.com",
+    "notes": "In-house roaster. Multi-location across FiDi, Midtown East, Hudson Yards."
+  },
+  {
+    "id": "variety-coffee-roasters",
+    "name": "Variety Coffee Roasters",
+    "city": "Brooklyn",
+    "country": "US",
+    "reputation": "regional-leader",
+    "specialties": ["direct-trade", "third-wave"],
+    "website": "https://www.varietycoffeeroasters.com",
+    "notes": "Williamsburg flagship + multi-location Brooklyn and Manhattan."
+  },
+  {
+    "id": "felix-roasting-co",
+    "name": "Felix Roasting Co.",
+    "city": "New York",
+    "country": "US",
+    "reputation": "notable",
+    "specialties": ["in-house-roastery", "design-led", "signature-drinks"],
+    "website": "https://felixroastingco.com",
+    "notes": "Madison Square / NoMad. Ornate interior; semi-luxe specialty positioning."
+  },
+  {
+    "id": "coffee-project-ny",
+    "name": "Coffee Project NY",
+    "city": "New York",
+    "country": "US",
+    "reputation": "regional-leader",
+    "specialties": ["competition", "education", "single-origin"],
+    "website": "https://coffeeprojectny.com",
+    "notes": "Co-founder Chi Sum Ngai — multi-time US Brewers Cup champion. Education-forward."
   }
 ]
