@@ -1,10 +1,61 @@
 # espresso-mcp
 
+[![npm version](https://img.shields.io/npm/v/espresso-mcp?logo=npm&color=cb3837)](https://www.npmjs.com/package/espresso-mcp)
+[![npm downloads](https://img.shields.io/npm/dm/espresso-mcp?logo=npm)](https://www.npmjs.com/package/espresso-mcp)
+[![MCP Registry](https://img.shields.io/badge/MCP%20Registry-listed-3b82f6?logo=anthropic)](https://registry.modelcontextprotocol.io)
+[![code license](https://img.shields.io/badge/code-MIT-green)](LICENSE)
+[![data license](https://img.shields.io/badge/data-CC--BY--4.0-blueviolet)](data/LICENSE)
+
 > An MCP server that finds great espresso cafes — and codifies what makes them great.
 
 `espresso-mcp` is a [Model Context Protocol](https://modelcontextprotocol.io) server you can plug into Claude Desktop, Claude.ai, ChatGPT, Google Gemini, Cursor, Hermes, OpenClaw, and any other standard MCP host. It ships with a curated database of 100+ specialty-coffee shops, 75+ specialty roasters, and a transparent scoring algorithm that captures *why* a shop is good — sourcing, freshness, equipment, training — and *why* a shop is bad (the heaviest negative signal: menus dominated by flavored syrups).
 
 It is **not** a Yelp clone. The data is hand-curated, the scoring is explicit, and the philosophy is "if it's covering bad coffee with flavors, we don't want it."
+
+---
+
+## The bias
+
+espresso-mcp has an opinion. Shops that hide bad coffee behind flavored syrups are the failure pattern this tool is designed to filter out. The scoring algorithm gives `syrup_emphasis` the heaviest non-disqualifying penalty (−22) — heavier than any single positive signal. Mass-market chains (Starbucks, Dunkin', Costa, Tim Hortons, Peet's, Caribou) and "looks third-wave but tastes flavored" shops (the algorithm's `flavor-led-specialty` category) score in `avoid` or `fair` tier regardless of how good the signage looks.
+
+Positive credit goes to the signals great shops actually invest in:
+
+- In-house roasting, or named-partner sourcing from a known specialty roaster
+- Single-origin espresso (not just blends)
+- Roast date on retail bags (peak-freshness commitment)
+- Espresso + pour-over both offered — the "complete program"
+- Cortado on the menu — a confidence proxy; shops avoid small milk drinks when their espresso can't hold up
+- Competition involvement / SCA-certified staff
+- Equipment from the third-wave shortlist (Slayer, La Marzocco, Synesso, Decent, Victoria Arduino, Modbar)
+- Recognition from authoritative rankings (World's 100 Best, SCA championships, Coffee Review 95+, Good Food Awards)
+
+Every signal is documented at [`src/scoring/weights.ts`](src/scoring/weights.ts) and surfaced to clients via the score breakdown on every result — you can see exactly *why* a cafe is recommended.
+
+---
+
+## See it in action
+
+```
+You: I'm near Brandenburg Gate in Berlin. Find me 3 great espresso cafes 
+     within walking distance.
+
+Claude: [resolves Brandenburg Gate → 52.5163, 13.3777]
+        [calls find_espresso_near with radius_km=2]
+
+  Found 3 specialty cafes within 2km of Brandenburg Gate, sorted by quality:
+
+  • The Barn (Mitte)         — 0.8km — score 95 (world-class) — World's #61
+    In-house roastery, single-origin focus, "never blends beans." Founded 
+    2010, one of Europe's leading third-wave roasters.
+
+  • Companion Coffee (Mitte) — 1.1km — score 83 (great)
+    Curated multi-roaster with rotating guest beans. Tea + coffee crossover 
+    in a quiet Mitte design space.
+
+  • Westberlin (Mitte)       — 1.3km — score 82 (great)
+    Iconic third-wave anchor since ~2010. Magazine + coffee concept; pours 
+    The Barn and rotating European roasters.
+```
 
 ---
 
@@ -404,6 +455,28 @@ The "looks specialty but isn't" pattern is tricky — a cafe with genuine third-
 
 ---
 
+## Curated coverage (v0.2.0)
+
+The database is hand-curated. Coverage skews toward cities where we (or trusted curated guides) have actual recent visits. We add cities batch-by-batch — open an issue if you want yours prioritized.
+
+| Region | Cafes | Districts represented |
+|---|---:|---|
+| Berlin | 15 | Mitte, Kreuzberg, Neukölln, Charlottenburg |
+| London | 15 | Holborn, Shoreditch, City, Marylebone, Bishopsgate, Hammersmith (incl. Workshop × 3) |
+| NYC (Manhattan + Brooklyn) | 17 | East Village, Nolita, Noho, Flatiron, FiDi, NoMad, Williamsburg, Bushwick, Park Slope |
+| Dallas / DFW | 18 | Design District, Lower Greenville, Oak Cliff / Bishop Arts, Deep Ellum, Knox-Henderson, Plano |
+| Denver metro | 18 | Capitol Hill, RiNo, LoHi, Tennyson, Edgewater, Aurora, Lone Tree, Littleton |
+| Hong Kong | 10 | Causeway Bay, Sheung Wan, Tsim Sha Tsui, Tai Hang |
+| Tokyo / Osaka | 6 | Omotesando, Nakameguro, Kuramae, Shimokitazawa, Sangubashi |
+| Guangzhou | 8 | Tianhe, Yuexiu, Liwan |
+| Other | ~9 | Oslo, Copenhagen, Dublin, Galway, Vienna, Singapore, Santa Ana SV, Rogers AR |
+
+Plus 8 deliberately-flagged anti-pattern entries (Starbucks, Dunkin', Costa, Tim Hortons, Peet's, Caribou, plus two "looks specialty but tastes flavored" examples).
+
+**Gaps worth filling next**: SF, LA, Seattle, Portland, Melbourne, Sydney, Stockholm, Amsterdam, Paris, Taipei, Seoul, Mexico City.
+
+---
+
 ## Contributing a cafe
 
 Open a PR against [`data/cafes.json`](data/cafes.json):
@@ -436,8 +509,32 @@ If you redistribute the data, please link back to this repository.
 
 ---
 
-## Acknowledgements
+## Sources we trained the patterns on
 
-- Seed cafe entries curated from World's 100 Best Coffee Shops, Good Food Awards, Sprudge, European Coffee Trip, D Magazine, Drips of God, Bee An Coffee, and direct visits across Tokyo, Denver, Guangzhou, Hong Kong, Berlin, London, NYC, and Dallas.
-- The signal taxonomy draws from Sprudge's specialty-coffee writing and the SCA's Barista Skills curriculum.
-- Built on [`@modelcontextprotocol/sdk`](https://github.com/modelcontextprotocol/typescript-sdk).
+The curated cafe roster, the signal weight table, and the anti-pattern category framing were built by reading and cross-referencing the people who already do this work well. Credit and links:
+
+**City and region guides**
+- [World's 100 Best Coffee Shops](https://worlds100bestcoffeeshops.com) — annual industry-voted ranking; the backbone of the world-class tier
+- [European Coffee Trip](https://europeancoffeetrip.com/city-guides/) — 6,229+ curated European specialty cafes; used heavily for the London and Berlin batches
+- [D Magazine — Best Dallas Coffee Shops and Roasters](https://www.dmagazine.com/guides/best-dallas-coffee-shops-and-roasters/) — the canonical DFW specialty guide
+- [Drips of God — New York](https://www.dripsofgod.com/new-york) — Manhattan + Brooklyn curation
+- [Bee An Coffee — Best Specialty Coffee in NYC 2026](https://beeancoffee.com/city-guides/best-specialty-coffee-in-nyc-2026/) — Brooklyn roastery focus
+- [Grounds Club — Hong Kong Specialty Coffee Guide](https://www.groundsclub.com/the-guide) — HK-specific
+- [Asian Coffee Map](https://asiancoffeemap.com) — Asia regional anchor
+
+**Awards and rankings**
+- [Sprudgie Awards](https://sprudge.com/sprudgies) — Sprudge's annual community awards
+- [Good Food Awards: Coffee](https://goodfoodfdn.org/awards) — US specialty roaster recognition
+- [Coffee Review (95+ scores)](https://www.coffeereview.com) — exceptional roast quality
+- [SCA World Barista Championship](https://worldbaristachampionship.org) — competition involvement is a high-signal indicator
+
+**Frameworks and taxonomies**
+- [Sprudge](https://sprudge.com) — long-form specialty coffee journalism; the original "signal taxonomy" intuition came from years of Sprudge reading
+- [Specialty Coffee Association — Barista Skills curriculum](https://sca.coffee) — equipment shortlist and certification framework
+- [SCA Certified Commercial Equipment list](https://sca.coffee/sca-certified/commercial-equipment) — what "quality espresso machine" means
+
+**A lot of time spent in cafes.** Fieldwork. Probably not tax-deductible. The most honest entry on this list — every weight in [`src/scoring/weights.ts`](src/scoring/weights.ts) was calibrated by someone who has been personally disappointed by a Slayer-equipped shop that turned out to lean syrup-forward.
+
+**Built on**
+- [`@modelcontextprotocol/sdk`](https://github.com/modelcontextprotocol/typescript-sdk) — the official MCP TypeScript SDK
+- [Zod](https://zod.dev), [tsup](https://tsup.egoist.dev), [Vitest](https://vitest.dev), [Firecrawl](https://firecrawl.dev) (for scraping city guides during curation)
