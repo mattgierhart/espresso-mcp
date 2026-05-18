@@ -639,5 +639,61 @@
     "reputation": "notable",
     "specialties": ["in-house-roastery", "Mediterranean-crossover"],
     "website": "https://paxandbeneficia.com"
+  },
+  {
+    "id": "logan-house-coffee",
+    "name": "Logan House Coffee",
+    "city": "Denver",
+    "country": "US",
+    "reputation": "notable",
+    "specialties": ["single-origin", "neighborhood-roastery"],
+    "website": "https://loganhousecoffee.com"
+  },
+  {
+    "id": "thump-coffee",
+    "name": "Thump Coffee",
+    "city": "Denver",
+    "country": "US",
+    "reputation": "regional-leader",
+    "specialties": ["direct-trade", "third-wave", "multi-location"],
+    "website": "https://thumpcoffee.com"
+  },
+  {
+    "id": "black-eye-coffee",
+    "name": "Black Eye Coffee",
+    "city": "Denver",
+    "country": "US",
+    "reputation": "notable",
+    "specialties": ["third-wave", "LoHi-anchor"],
+    "website": "https://blackeyecoffee.com"
+  },
+  {
+    "id": "allegro-coffee",
+    "name": "Allegro Coffee Roasters",
+    "city": "Thornton",
+    "country": "US",
+    "reputation": "regional-leader",
+    "specialties": ["established", "direct-trade", "Whole-Foods-affiliate"],
+    "website": "https://allegrocoffee.com",
+    "notes": "Established Colorado specialty roaster. Operates with real specialty credentials despite corporate affiliation."
+  },
+  {
+    "id": "commonwealth-coffee",
+    "name": "Commonwealth Coffee",
+    "city": "Aurora",
+    "country": "US",
+    "reputation": "notable",
+    "specialties": ["direct-trade", "Stanley-Marketplace"],
+    "website": "https://commonwealthcoffee.com"
+  },
+  {
+    "id": "lost-coffee",
+    "name": "Lost Coffee",
+    "city": "Littleton",
+    "country": "US",
+    "reputation": "notable",
+    "specialties": ["direct-trade", "small-batch", "south-Denver"],
+    "website": "https://www.lostcoffee.com",
+    "notes": "Founded 2010 as a mobile coffee truck. Small-batch roasting in Littleton, CO."
   }
 ]
