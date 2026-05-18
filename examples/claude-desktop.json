@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "espresso": {
+      "command": "npx",
+      "args": ["-y", "espresso-mcp"]
+    }
+  }
+}

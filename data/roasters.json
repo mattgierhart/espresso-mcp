@@ -1,0 +1,336 @@
+[
+  {
+    "id": "onyx-coffee-lab",
+    "name": "Onyx Coffee Lab",
+    "city": "Rogers",
+    "country": "US",
+    "reputation": "world-class",
+    "specialties": ["light-roast", "competition", "direct-trade"],
+    "source_rankings": [{ "source": "worlds-100-best-2026", "rank": 1 }],
+    "website": "https://onyxcoffeelab.com",
+    "notes": "James Beard Outstanding Bar finalist. Solar-powered roastery. Currently the #1 ranked coffee shop in the world."
+  },
+  {
+    "id": "tim-wendelboe",
+    "name": "Tim Wendelboe",
+    "city": "Oslo",
+    "country": "NO",
+    "reputation": "world-class",
+    "specialties": ["light-roast", "direct-trade", "natural-process"],
+    "source_rankings": [{ "source": "worlds-100-best-2026", "rank": 2 }],
+    "website": "https://timwendelboe.no",
+    "notes": "World Barista Champion 2004. Pioneer of Nordic light-roast style and direct trade."
+  },
+  {
+    "id": "alquimia-coffee",
+    "name": "Alquimia Coffee",
+    "city": "Santa Ana",
+    "country": "SV",
+    "reputation": "world-class",
+    "specialties": ["origin-roaster", "competition-coach"],
+    "source_rankings": [{ "source": "worlds-100-best-2026", "rank": 3 }],
+    "notes": "Run by the most successful WBC coach in history."
+  },
+  {
+    "id": "coffee-collective",
+    "name": "Coffee Collective",
+    "city": "Copenhagen",
+    "country": "DK",
+    "reputation": "world-class",
+    "specialties": ["direct-trade", "cooperative", "light-roast"],
+    "website": "https://coffeecollective.dk",
+    "notes": "Direct trade cooperative model. Multi-WBC competitors."
+  },
+  {
+    "id": "la-cabra",
+    "name": "La Cabra",
+    "city": "Copenhagen",
+    "country": "DK",
+    "reputation": "world-class",
+    "specialties": ["light-roast", "direct-trade"],
+    "website": "https://lacabra.dk",
+    "notes": "Nordic minimalism with obsessive sourcing."
+  },
+  {
+    "id": "the-barn",
+    "name": "The Barn",
+    "city": "Berlin",
+    "country": "DE",
+    "reputation": "world-class",
+    "specialties": ["single-origin-only", "no-blends", "direct-trade"],
+    "website": "https://thebarn.de",
+    "notes": "Never blends. Full traceability. Leading European roaster since 2010."
+  },
+  {
+    "id": "3fe",
+    "name": "3fe",
+    "city": "Dublin",
+    "country": "IE",
+    "reputation": "world-class",
+    "specialties": ["direct-trade", "competition"],
+    "website": "https://3fe.com",
+    "notes": "Colin Harmon — three-time Irish Barista Champion."
+  },
+  {
+    "id": "square-mile-coffee",
+    "name": "Square Mile Coffee",
+    "city": "London",
+    "country": "GB",
+    "reputation": "world-class",
+    "specialties": ["direct-trade", "competition", "light-roast"],
+    "website": "https://shop.squaremilecoffee.com",
+    "notes": "James Hoffmann's roastery. Multi-WBC winners."
+  },
+  {
+    "id": "workshop-coffee",
+    "name": "Workshop Coffee",
+    "city": "London",
+    "country": "GB",
+    "reputation": "world-class",
+    "specialties": ["direct-trade", "light-roast"],
+    "website": "https://workshopcoffee.com"
+  },
+  {
+    "id": "proud-mary",
+    "name": "Proud Mary",
+    "city": "Melbourne",
+    "country": "AU",
+    "reputation": "world-class",
+    "specialties": ["direct-trade", "competition"],
+    "website": "https://proudmarycoffee.com",
+    "notes": "Melbourne and Portland OR locations. Sourcing-first roaster."
+  },
+  {
+    "id": "april-coffee",
+    "name": "April Coffee",
+    "city": "Copenhagen",
+    "country": "DK",
+    "reputation": "world-class",
+    "specialties": ["competition", "light-roast"],
+    "notes": "Patrik Rolf — World Brewers Cup champion."
+  },
+  {
+    "id": "manhattan-coffee",
+    "name": "Manhattan Coffee Roasters",
+    "city": "Rotterdam",
+    "country": "NL",
+    "reputation": "world-class",
+    "specialties": ["light-roast", "competition"]
+  },
+  {
+    "id": "drop-coffee",
+    "name": "Drop Coffee",
+    "city": "Stockholm",
+    "country": "SE",
+    "reputation": "world-class",
+    "specialties": ["light-roast", "direct-trade"]
+  },
+  {
+    "id": "koppi",
+    "name": "Koppi",
+    "city": "Helsingborg",
+    "country": "SE",
+    "reputation": "world-class",
+    "specialties": ["light-roast", "direct-trade"]
+  },
+  {
+    "id": "fjord-coffee",
+    "name": "Fjord Coffee",
+    "city": "Berlin",
+    "country": "DE",
+    "reputation": "regional-leader",
+    "specialties": ["light-roast", "direct-trade"]
+  },
+  {
+    "id": "five-elephant",
+    "name": "Five Elephant",
+    "city": "Berlin",
+    "country": "DE",
+    "reputation": "regional-leader",
+    "specialties": ["direct-trade", "light-roast"]
+  },
+  {
+    "id": "bonanza-coffee",
+    "name": "Bonanza Coffee",
+    "city": "Berlin",
+    "country": "DE",
+    "reputation": "regional-leader",
+    "specialties": ["direct-trade"]
+  },
+  {
+    "id": "sweet-bloom",
+    "name": "Sweet Bloom Coffee Roasters",
+    "city": "Lakewood",
+    "country": "US",
+    "reputation": "regional-leader",
+    "specialties": ["light-roast", "direct-trade", "competition"],
+    "website": "https://sweetbloomcoffee.com",
+    "notes": "Won basically every US specialty award."
+  },
+  {
+    "id": "corvus-coffee",
+    "name": "Corvus Coffee Roasters",
+    "city": "Denver",
+    "country": "US",
+    "reputation": "regional-leader",
+    "specialties": ["direct-trade", "Gesha"],
+    "website": "https://corvuscoffee.com"
+  },
+  {
+    "id": "huckleberry-roasters",
+    "name": "Huckleberry Roasters",
+    "city": "Denver",
+    "country": "US",
+    "reputation": "regional-leader",
+    "specialties": ["direct-trade"]
+  },
+  {
+    "id": "counter-culture",
+    "name": "Counter Culture Coffee",
+    "city": "Durham",
+    "country": "US",
+    "reputation": "regional-leader",
+    "specialties": ["direct-trade", "education", "transparency-report"],
+    "website": "https://counterculturecoffee.com"
+  },
+  {
+    "id": "heart-roasters",
+    "name": "Heart Roasters",
+    "city": "Portland",
+    "country": "US",
+    "reputation": "regional-leader",
+    "specialties": ["light-roast", "Probat"],
+    "website": "https://heartroasters.com"
+  },
+  {
+    "id": "intelligentsia",
+    "name": "Intelligentsia Coffee",
+    "city": "Chicago",
+    "country": "US",
+    "reputation": "regional-leader",
+    "specialties": ["direct-trade", "competition"]
+  },
+  {
+    "id": "stumptown",
+    "name": "Stumptown Coffee Roasters",
+    "city": "Portland",
+    "country": "US",
+    "reputation": "regional-leader",
+    "specialties": ["direct-trade"]
+  },
+  {
+    "id": "verve",
+    "name": "Verve Coffee Roasters",
+    "city": "Santa Cruz",
+    "country": "US",
+    "reputation": "regional-leader",
+    "specialties": ["direct-trade", "competition"]
+  },
+  {
+    "id": "george-howell",
+    "name": "George Howell Coffee",
+    "city": "Acton",
+    "country": "US",
+    "reputation": "world-class",
+    "specialties": ["origin-discovery", "Cup-of-Excellence"]
+  },
+  {
+    "id": "blue-bottle",
+    "name": "Blue Bottle Coffee",
+    "city": "Oakland",
+    "country": "US",
+    "reputation": "notable",
+    "specialties": ["light-roast", "single-origin"]
+  },
+  {
+    "id": "koffee-mameya",
+    "name": "Koffee Mameya",
+    "city": "Tokyo",
+    "country": "JP",
+    "reputation": "world-class",
+    "specialties": ["coffee-sommelier", "curated-tasting"],
+    "notes": "Koffee Mameya + Koffee Mameya Kakeru — sommelier-style coffee bar."
+  },
+  {
+    "id": "onibus",
+    "name": "Onibus Coffee",
+    "city": "Tokyo",
+    "country": "JP",
+    "reputation": "regional-leader",
+    "specialties": ["light-roast"],
+    "notes": "Pioneered light/fruit-forward roasts in Japan."
+  },
+  {
+    "id": "leaves-coffee",
+    "name": "Leaves Coffee Roasters",
+    "city": "Tokyo",
+    "country": "JP",
+    "reputation": "regional-leader",
+    "specialties": ["light-roast", "competition"]
+  },
+  {
+    "id": "fuglen",
+    "name": "Fuglen",
+    "city": "Oslo",
+    "country": "NO",
+    "reputation": "regional-leader",
+    "specialties": ["vintage-aesthetic"],
+    "notes": "Oslo-Tokyo Norwegian-Japanese crossover."
+  },
+  {
+    "id": "novo-coffee",
+    "name": "Novo Coffee",
+    "city": "Denver",
+    "country": "US",
+    "reputation": "notable",
+    "specialties": ["direct-trade"]
+  },
+  {
+    "id": "middle-state-coffee",
+    "name": "Middle State Coffee",
+    "city": "Denver",
+    "country": "US",
+    "reputation": "notable",
+    "specialties": ["seasonal", "single-origin"]
+  },
+  {
+    "id": "boxcar-coffee",
+    "name": "Boxcar Coffee Roasters",
+    "city": "Boulder",
+    "country": "US",
+    "reputation": "notable",
+    "specialties": ["single-origin"]
+  },
+  {
+    "id": "gota-coffee",
+    "name": "Gota Coffee Experts",
+    "city": "Vienna",
+    "country": "AT",
+    "reputation": "regional-leader",
+    "specialties": ["education", "Peruvian-origin"]
+  },
+  {
+    "id": "espresso-alchemy",
+    "name": "Espresso Alchemy",
+    "city": "Hong Kong",
+    "country": "HK",
+    "reputation": "regional-leader",
+    "specialties": ["single-origin"]
+  },
+  {
+    "id": "ult-coffee",
+    "name": "Ult Coffee",
+    "city": "Osaka",
+    "country": "JP",
+    "reputation": "regional-leader",
+    "specialties": ["precision-brewing"]
+  },
+  {
+    "id": "bear-pond-espresso",
+    "name": "Bear Pond Espresso",
+    "city": "Tokyo",
+    "country": "JP",
+    "reputation": "notable",
+    "specialties": ["espresso-only", "Flower-Child-blend"]
+  }
+]

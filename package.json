@@ -1,0 +1,62 @@
+{
+  "name": "espresso-mcp",
+  "version": "0.1.0",
+  "description": "MCP server for finding great espresso cafes. Codifies what makes great espresso into a transparent scoring algorithm, backed by a curated database of specialty coffee shops.",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "espresso",
+    "coffee",
+    "specialty-coffee",
+    "third-wave",
+    "claude",
+    "openai",
+    "ai-tool"
+  ],
+  "homepage": "https://github.com/mattgierhart/espresso-mcp",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mattgierhart/espresso-mcp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mattgierhart/espresso-mcp/issues"
+  },
+  "license": "MIT",
+  "author": "Matt Gierhart",
+  "type": "module",
+  "main": "./dist/index.js",
+  "bin": {
+    "espresso-mcp": "./dist/index.js"
+  },
+  "files": [
+    "dist",
+    "data",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "start": "node dist/index.js",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "validate-data": "vitest run test/data.test.ts",
+    "inspect": "npx @modelcontextprotocol/inspector node dist/index.js",
+    "prepublishOnly": "npm run typecheck && npm run test && npm run build"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.29.0",
+    "zod": "^3.25.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "tsup": "^8.5.0",
+    "tsx": "^4.20.0",
+    "typescript": "^5.7.0",
+    "vitest": "^2.1.0"
+  }
+}

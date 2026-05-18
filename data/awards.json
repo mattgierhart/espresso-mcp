@@ -1,0 +1,49 @@
+[
+  {
+    "source": "worlds-100-best-2026",
+    "title": "World's 100 Best Coffee Shops 2026",
+    "year": 2026,
+    "publisher": "World's 100 Best",
+    "url": "https://worlds100bestcoffeeshops.com",
+    "description": "Annual ranking of the world's top specialty coffee shops, judged by an international panel of industry voters."
+  },
+  {
+    "source": "worlds-100-best-2025",
+    "title": "World's 100 Best Coffee Shops 2025",
+    "year": 2025,
+    "publisher": "World's 100 Best",
+    "url": "https://worlds100bestcoffeeshops.com"
+  },
+  {
+    "source": "good-food-awards-2026",
+    "title": "Good Food Awards: Coffee 2026",
+    "year": 2026,
+    "publisher": "Good Food Foundation",
+    "url": "https://goodfoodfdn.org/awards",
+    "description": "US-focused award recognizing roasters that combine outstanding taste with environmental and social responsibility."
+  },
+  {
+    "source": "sca-world-barista-championship",
+    "title": "SCA World Barista Championship",
+    "year": 2026,
+    "publisher": "Specialty Coffee Association",
+    "url": "https://worldbaristachampionship.org",
+    "description": "Annual world championship for baristas. Past competitors and coaches are a reliable quality signal."
+  },
+  {
+    "source": "coffee-review-95-plus",
+    "title": "Coffee Review 95+ Scores",
+    "year": 2026,
+    "publisher": "Coffee Review",
+    "url": "https://www.coffeereview.com",
+    "description": "Coffee Review scores 95 and above signal exceptional roasting quality."
+  },
+  {
+    "source": "sprudgie-awards",
+    "title": "Sprudgie Awards",
+    "year": 2026,
+    "publisher": "Sprudge",
+    "url": "https://sprudge.com/sprudgies",
+    "description": "Annual specialty coffee community awards covering shops, roasters, and people."
+  }
+]
