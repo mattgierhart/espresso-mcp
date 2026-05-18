@@ -332,5 +332,70 @@
     "country": "JP",
     "reputation": "notable",
     "specialties": ["espresso-only", "Flower-Child-blend"]
+  },
+  {
+    "id": "cupping-room",
+    "name": "The Cupping Room",
+    "city": "Hong Kong",
+    "country": "HK",
+    "reputation": "regional-leader",
+    "specialties": ["direct-trade", "competition", "single-origin"],
+    "website": "https://www.cuppingroom.hk",
+    "notes": "HK third-wave pioneer. Founder is a former HK Barista Champion."
+  },
+  {
+    "id": "coffee-academics",
+    "name": "The Coffee Academics",
+    "city": "Hong Kong",
+    "country": "HK",
+    "reputation": "regional-leader",
+    "specialties": ["direct-trade", "top-5-percent-arabica"],
+    "website": "https://the-coffeeacademics.com",
+    "notes": "Sources top 5% Arabica from 50+ independent farms globally. Multi-location."
+  },
+  {
+    "id": "percent-arabica",
+    "name": "% Arabica",
+    "city": "Kyoto",
+    "country": "JP",
+    "reputation": "regional-leader",
+    "specialties": ["light-roast", "Kyoto-Geisha", "minimalist"],
+    "website": "https://arabica.coffee",
+    "notes": "Global Kyoto-origin brand. Locations across HK, Japan, Singapore, Dubai, Paris, London."
+  },
+  {
+    "id": "18-grams",
+    "name": "18 Grams",
+    "city": "Hong Kong",
+    "country": "HK",
+    "reputation": "regional-leader",
+    "specialties": ["direct-trade", "third-wave-pioneer"],
+    "website": "https://www.18grams.com",
+    "notes": "Founded 2007. One of HK's earliest third-wave roasters."
+  },
+  {
+    "id": "sensory-zero",
+    "name": "Sensory Zero",
+    "city": "Hong Kong",
+    "country": "HK",
+    "reputation": "regional-leader",
+    "specialties": ["direct-trade", "single-origin"]
+  },
+  {
+    "id": "urban-coffee-roaster",
+    "name": "Urban Coffee Roaster",
+    "city": "Hong Kong",
+    "country": "HK",
+    "reputation": "regional-leader",
+    "specialties": ["direct-trade", "TST-flagship"],
+    "website": "https://urbancoffee.hk"
+  },
+  {
+    "id": "oma-coffee",
+    "name": "OMA Specialty Coffee",
+    "city": "Hong Kong",
+    "country": "HK",
+    "reputation": "notable",
+    "specialties": ["Tai-Hang", "neighborhood-specialty"]
   }
 ]
