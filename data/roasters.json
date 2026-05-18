@@ -466,5 +466,51 @@
     "reputation": "notable",
     "specialties": ["in-house-roastery", "multi-location"],
     "website": "https://saint-espresso.com"
+  },
+  {
+    "id": "coffee-circle",
+    "name": "Coffee Circle",
+    "city": "Berlin",
+    "country": "DE",
+    "reputation": "regional-leader",
+    "specialties": ["direct-trade", "Ethiopia-origin-program", "community-funding"],
+    "website": "https://www.coffeecircle.com",
+    "notes": "Founded 2010. Direct-trade program with Ethiopian farms. Multi-location Berlin (Torstraße, Bergmann, Rosa-Luxemburg, Maybachufer, Wedding)."
+  },
+  {
+    "id": "19grams",
+    "name": "19grams",
+    "city": "Berlin",
+    "country": "DE",
+    "reputation": "regional-leader",
+    "specialties": ["third-wave-pioneer", "direct-trade"],
+    "website": "https://19grams.coffee",
+    "notes": "Berlin third-wave pioneer. Multiple locations across the city."
+  },
+  {
+    "id": "roeststaette-berlin",
+    "name": "Röststätte Berlin",
+    "city": "Berlin",
+    "country": "DE",
+    "reputation": "notable",
+    "specialties": ["in-house-roastery", "visible-roaster"],
+    "website": "https://roeststaette.com"
+  },
+  {
+    "id": "refinery-roasters",
+    "name": "Refinery",
+    "city": "Berlin",
+    "country": "DE",
+    "reputation": "notable",
+    "specialties": ["single-origin", "third-wave"]
+  },
+  {
+    "id": "isla-coffee",
+    "name": "Isla Coffee",
+    "city": "Berlin",
+    "country": "DE",
+    "reputation": "notable",
+    "specialties": ["zero-waste", "closed-loop-sustainability", "single-origin"],
+    "website": "https://islacoffee.de"
   }
 ]
