@@ -9,4 +9,5 @@ coverage/
 .idea/
 .firecrawl/
 .npmrc
+MAINTAINER.md
 
